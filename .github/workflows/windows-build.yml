@@ -1,6 +1,19 @@
 name: windows build
 
 on:
+  push:
+    paths:
+    - ".github/workflows/windows-build.yml"
+    - "CMakeLists.txt"
+    - "src/*"
+    - "scripts/*"
+  pull_request:
+    paths:
+    - ".github/workflows/windows-build.yml"
+    - "CMakeLists.txt"
+    - "src/*"
+    - "scripts/*"
+  workflow_call:
   workflow_dispatch:
 
 jobs:
